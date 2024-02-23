@@ -5,6 +5,7 @@ metadata:
 spec:
   name: testrole
   description: ""
+  maxSessionDuration: 3600
   assumeRolePolicyDocument: >
     {
       "Version":"2012-10-17",
