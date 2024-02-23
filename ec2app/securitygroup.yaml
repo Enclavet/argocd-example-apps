@@ -2,3 +2,7 @@ apiVersion: ec2.services.k8s.aws/v1alpha1
 kind: SecurityGroup
 metadata:
   name: testsg
+spec:
+  description: Test SG
+  name: testsg
+  vpcID: vpc-055279822e8143760
