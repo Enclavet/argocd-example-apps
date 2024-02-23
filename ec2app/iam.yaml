@@ -1,0 +1,23 @@
+apiVersion: iam.services.k8s.aws/v1alpha1
+kind: Role
+metadata:
+  name: testrole
+spec:
+  name: testrole
+  description: ""
+  assumeRolePolicyDocument: >
+    {
+      "Version":"2012-10-17",
+      "Statement": [{
+        "Effect":"Allow",
+        "Principal": {
+          "Service": [
+            "ec2.amazonaws.com"
+          ]
+        },
+        "Action": ["sts:AssumeRole"]
+      }]
+    }
+  tags:
+    - key: tag1
+      value: val1
